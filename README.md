@@ -1,6 +1,6 @@
 # Recipe Sharing Application
 ## Database schema
-![Recipe App Database Schema](/Screenshots/Recipe%20App%20Database%20Schema.jpg)
+![Recipe App Database Schema](/Screenshots/Recipe%20App%20Database%20Schema.png)
 
 ## Screenshots
 
