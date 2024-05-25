@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="white-box"> <!-- Wrap content with white box -->
+            <div class="row">
+                <div class="col">
+                    <h2 id="recipeName">Recipe Name</h2>
+                </div>
+                <div class="col-auto">
+                    <p>Cooking Time: 20 minutes</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <!-- Display Average Rating -->
+                    <p id="avgRating"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <!-- Display Description -->
+                    <p id="recipeDescription"></p>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col">
+                    <p id="recipeImage"></p>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col">
+                    <!-- Button to trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addReviewModal">
+                        Add Review
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="addReviewModal" tabindex="-1" role="dialog" aria-labelledby="addReviewModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="addReviewModalLabel">Add Review</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- Review form -->
+                                    <form id="reviewForm">
+                                        <div class="form-group">
+                                            <label for="rating">Rating (out of 5):</label>
+                                            <input type="number" class="form-control" id="rating" name="rating" min="1" max="5" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="review">Review:</label>
+                                            <textarea class="form-control" id="review" name="review" rows="3" required></textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary" form="reviewForm">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col">
+                    <h3>Reviews</h3>
+                    <ul class="list-group">
+                        <!-- Reviews will be dynamically added here -->
+                        <li class="list-group-item">
+                            <div style="display: flex; align-items: center;">
+                                <img src="images/user.png" alt="User Profile Picture" class="mr-2" style="width: 40px; height: 40px; border-radius: 50%;">
+                                <h5>John Doe</h5>
+                                <span class="pt-2 mr-2 pr-2" style="position: absolute; top: 0; right: 0;">3 stars</span>
+                            </div><br/>                         
+                            <p>Delicious and easy to make!</p>
+                        </li>
+                        <li class="list-group-item">
+                            <div style="display: flex; align-items: center;">
+                                <img src="images/user.png" alt="User Profile Picture" class="mr-2" style="width: 40px; height: 40px; border-radius: 50%;">
+                                <h5>Brett Lee</h5>
+                                <span class="pt-2 mr-2 pr-2" style="position: absolute; top: 0; right: 0;">3 stars</span>
+                            </div><br/>                         
+                            <p>Very tasty!</p>
+                        </li>
+                        <li class="list-group-item">
+                            <div style="display: flex; align-items: center;">
+                                <img src="images/user.png" alt="User Profile Picture" class="mr-2" style="width: 40px; height: 40px; border-radius: 50%;">
+                                <h5>Arya Stark</h5>
+                                <span class="pt-2 mr-2 pr-2" style="position: absolute; top: 0; right: 0;">1 stars</span>
+                            </div><br/>                         
+                            <p>Didn't like the recipe. Turned out bad.</p>
+                        </li>
+                        <li class="list-group-item">
+                            <div style="display: flex; align-items: center;">
+                                <img src="images/user.png" alt="User Profile Picture" class="mr-2" style="width: 40px; height: 40px; border-radius: 50%;">
+                                <h5>Akshay Kumar</h5>
+                                <span class="pt-2 mr-2 pr-2" style="position: absolute; top: 0; right: 0;">5 stars</span>
+                            </div><br/>                         
+                            <p>Simple recipe. My family loved it!</p>
+                        </li>
+                        <li class="list-group-item">
+                            <div style="display: flex; align-items: center;">
+                                <img src="images/user.png" alt="User Profile Picture" class="mr-2" style="width: 40px; height: 40px; border-radius: 50%;">
+                                <h5>Ajitesh</h5>
+                                <span class="pt-2 mr-2 pr-2" style="position: absolute; top: 0; right: 0;">2 stars</span>
+                            </div><br/>                         
+                            <p>Didn't like it</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="recipePage.js"></script>
+</body>
+</html>
