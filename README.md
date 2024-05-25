@@ -5,13 +5,13 @@
 ## Screenshots
 
 ### Add Review
-![Add Review](/Screenshots/Add%20Review%20-%20Recipe%20App.png)
+![Add Review](/Screenshots/Add%20Review%20%20-%20Recipe%20App.png)
 
 ### Create Recipe
 ![Create Recipe](/Screenshots/Create%20Recipe%20-%20Recipe%20App.png)
 
 ### Dietary Preferences
-![Dietary Preferences](/Screenshots/Dietary%20Preferences%20-%20Recipe%20App.png)
+![Dietary Preferences](/Screenshots/Dietary%20Preferences%20%20-%20Recipe%20App.png)
 
 ### Login
 ![Login](/Screenshots/Login%20-%20Recipe%20App.png)
